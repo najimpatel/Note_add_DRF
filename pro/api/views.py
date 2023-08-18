@@ -4,3 +4,7 @@ from .serializers import NoteSerializer
 from rest_framework import viewsets 
 
 
+# Create your views here.
+class NoteView(viewsets.ModelViewSet):
+    queryset = Note.objects.all()
+    serializer_class = NoteSerializer
